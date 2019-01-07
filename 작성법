@@ -1,0 +1,36 @@
+해당 소켓에게만 'test' 에 value 를 전송
+    io.to(socket.id).emit('test',value);
+
+모든 소켓접속자에게 
+    io.emit('test',value);
+
+해당 소켓의 ip확인
+socket.request.connection.remoteAddress
+var ip_box=socket.request.connection.remoteAddress
+ip_box=ip_box.replace(/\./g,"x");// jquery 에서 .은 class를 뜻하는거라 
+ip_box=ip_box.replace(/\:/g,"");// 같은이유로
+
+
+
+
+
+해당 소켓이 연결이 끊어진것을 확인할때,
+socket.on('disconnect', function(){ //3-2
+      var ip_box=catch_ip(socket);
+      (UserCount(ip_box,"-")<0)?deleteUSER(ip_box):"";
+    });
+
+
+
+//아래는 클라이언트 버젼.
+
+client 에서 소켓 사용하려면 선언
+var socket = io(); 
+
+서버에서 'test' 에 value가 넘어오면 함수 실행
+socket.on('test', function(value){
+    console.log(value);
+ });
+
+서버로 전송
+socket.emit('client test', value);

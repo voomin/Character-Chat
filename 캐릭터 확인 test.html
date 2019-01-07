@@ -1,0 +1,42 @@
+﻿<style>
+    body{
+        background-color: pink;
+    }
+	div{
+        cursor:pointer;
+		float:left;
+	}
+	img{
+		width:50px;
+		height:50px;
+	}
+</style>
+<html>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src='public/js/server/chat.js'></script>
+    <body>
+    </body>
+</html>
+<script>
+	for(i in imgs_src){
+		document.write("<div title='remove'><img src="+imgs_src[i]+"></img></div>");
+    }
+    $(function(){
+        $("div").click(function(){
+            var index=$(this).index();
+
+            imgs_src.splice((index-1),1);
+            index++;
+            //alert(index+"index");
+            $("div:nth-child("+index+")").remove();
+            //console.log(imgs_src);
+        });
+    })
+    function arr(){
+        console.log(imgs_src.length+" 개의 캐릭터들");
+        document.write("var imgs_src = [<br>");
+        for(i in imgs_src)
+        document.write("\""+imgs_src[i]+"\",<br>");
+        document.write("];");
+    }
+</script>

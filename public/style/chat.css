@@ -1,0 +1,131 @@
+body {
+    overflow:hidden;
+    text-align:center;
+    /*color: #651727;*/
+    color: #eee;
+    background: currentColor;
+    font-family: "NOTO_light", Times, serif;
+    margin:0 auto;
+    padding:0 auto;
+    display:table;
+}
+@font-face { 
+    font-family: 'NOTO_light'; 
+    src: url('font/noto/NotoSerifCJKkr-ExtraLight.otf') format('truetype'); 
+} 
+
+.header{
+}
+.header h1 {
+    font-weight: bold;
+    font: 900 90px NOTO_light;
+    -webkit-animation: anim 1.5s infinite alternate ease-in-out;
+    animation: anim 1.5s infinite alternate ease-in-out;
+}
+@-webkit-keyframes anim {
+    from {
+        text-shadow: 0 0 5px transparent;
+    }
+    to {
+        text-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    }
+}
+@keyframes anim {
+    from {
+        text-shadow: 0 0 5px transparent;
+    }
+    to {
+        text-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    }
+}
+.map{
+    margin-top:5%;
+    font-family: "NOTO_light", Times, serif;
+    font-size:16px;
+    color:#bfbfbf;
+    border:5px dotted #333;
+}
+
+
+.map .u, .map .u *{
+    position: absolute;
+}
+.map .u .talk{
+    min-width: 100px;
+    position: absolute;
+    margin-top:-25px;
+    border:0px solid #333;
+    background-color: #f2f0a0;
+    border-radius: 4px;
+
+	opacity:0.8;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	padding:4px 4px;
+	color:#fff;
+    background-color:#000;
+}
+.right{
+    float:right;
+    width:20%;
+    margin:50px 20px 20px 20px;
+    padding-bottom:20px;
+}
+.array{
+    cursor: pointer;
+    font-weight:bold;
+    text-align:center;
+    color:#111;
+    margin-bottom:20px;
+}
+.city{
+    color:black;
+    border-radius: 20px;
+    border:3px solid black;
+    padding:0 10px 0 10px;
+    box-shadow: 5px 5px 5px black;
+    overflow: hidden;
+}
+
+#chat{
+    height: 35px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    position: fixed;
+    z-index: 999;
+    bottom: 0px;
+    left: 1px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+#chat *{
+    outline: none;/*커서 됬을때 파란선 없애기*/
+    float:left;
+    height: 100%; 
+    background-color:rgba(0, 0, 0, 0.0);
+    font-family: "NOTO_light", Times, serif;
+    color:#bfbfbf;
+    font-size:20px;
+}
+#chat .name{ 
+    width: 15%;
+    border:0px solid #eee;
+    text-align:center;
+}
+#chat .message{
+    width: 69%;
+    height:36px;
+    border:0px solid white;
+    border-bottom:5px solid #777;
+    border-radius: 0em 0em 1em 0em;
+    resize: none;
+    }
+#chat .chat{ 
+    text-align:center;
+    cursor:pointer;
+    width: 15%;
+    border-radius: 28px;
+    border:0px solid #eee;
+}
