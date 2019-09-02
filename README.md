@@ -14,10 +14,10 @@ Node js, express js, pug
 이 처리방식(알고리즘)이 제일 부드럽게 보여주는 형태를 띄었고 이 방식을 토대로 소켓통신과 결합하여 온라인으로 연출할 수 있게 되었다.
 
 ## 파일정보
-server.js : 서버의 메인파일
-socket.js : 클라이언트간 소켓통신할때 처리되는 파일
-things.js : url링크 처리 파일
++ server.js : 서버의 메인파일
++ socket.js : 클라이언트간 소켓통신할때 처리되는 파일
++ things.js : url링크 처리 파일
 
-views 폴더 : 클라이언트에서 보여주는 웹view를 담아놓은 폴더
-public 폴더 : 서버,클라이언트에서 공용으로 사용될 css,js,image,font를 담아놓은 폴더
++ views 폴더 : 클라이언트에서 보여주는 웹view를 담아놓은 폴더
++ public 폴더 : 서버,클라이언트에서 공용으로 사용될 css,js,image,font를 담아놓은 폴더
 
