@@ -1,3 +1,15 @@
+const R=(min,max)=> parseInt(Math.random()*(max-min))+min;//min <= return < max
+const set={
+    block:35,//캐릭터 사이즈(전체캐릭터)
+    SPD:R(0,4),//default
+    Maxspd:R(3,9),//최고속력
+    spd:this.SPD,//현재속력
+    a:R(1,4)/10,//가속도
+    map_width:1000,
+    map_height:700,
+    //G:true//중력
+  }
+const idSet=(id)=> id.replace(/\./g,"x").replace(/\:/g,"");
 var myid=null;
 var socket = io(); 
 document.addEventListener("touchstart", touchHandler);
@@ -110,7 +122,6 @@ function createUser(obj){
     
 }
 var thread=null;
-var R=(min,max)=> parseInt(Math.random()*(max-min))+min;//min <= return < max
 var UserPosition= (id,px) => $("#u"+id).css({ marginLeft : px[0], marginTop : px[1] } );
 var point=[0,0,0,0];
 var px=[0,0];

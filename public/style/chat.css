@@ -11,7 +11,7 @@ body {
 }
 @font-face { 
     font-family: 'NOTO_light'; 
-    src: url('font/noto/NotoSerifCJKkr-ExtraLight.otf') format('truetype'); 
+    src: url('assets/font/noto/NotoSerifCJKkr-ExtraLight.otf') format('truetype'); 
 } 
 
 .header{
